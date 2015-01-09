@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Alizarin">#E32636</color>
+    <color name="Amaranth">#E52B50</color>
+    <color name="green_pressed">#207542</color>
+    <color name="green_normal">#2ea95f</color>
+    <color name="pink_eloviz">#e63656</color>
+    <color name="white">#ffffff</color>
+</resources>
