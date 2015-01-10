@@ -15,7 +15,6 @@ import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -188,8 +187,8 @@ public class SoundRecordActivity extends Activity {
     private void showNotification(){
         Notification n = new Notification(R.drawable.ic_recording, null, System.currentTimeMillis());
         n.flags = Notification.FLAG_ONGOING_EVENT;
-        Intent intent = new Intent(SoundRecordActivity.this,SoundRecordActivity.class);
-        PendingIntent contentIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent intent = new Intent(this,SoundRecordActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         n.setLatestEventInfo(this, "SoundRecorder", "It's recording", contentIntent);
         NotificationManager mNM = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNM.notify(1001, n);
