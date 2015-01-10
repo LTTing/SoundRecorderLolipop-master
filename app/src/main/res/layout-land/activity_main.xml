@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -13,31 +14,55 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <FrameLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:id="@+id/logo_imageView"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_launcher"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="40dp">
+            android:orientation="horizontal"
+            android:gravity="center">
 
-            <Button
-                android:id="@+id/record"
-                android:text="Record"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content" />
-        </FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp">
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="40dp">
+                <Button
+                    android:id="@+id/record"
+                    android:text="Record"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"/>
+            </FrameLayout>
 
-            <Button
-                android:layout_width="200dp"
-                android:id="@+id/list"
-                android:text="List"
-                android:layout_height="wrap_content" />
-        </FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp">
+
+                <Button
+                    android:layout_width="200dp"
+                    android:id="@+id/list"
+                    android:text="List"
+                    android:layout_height="wrap_content"
+                    android:background="#000000" />
+            </FrameLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

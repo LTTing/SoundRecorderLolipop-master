@@ -6,4 +6,7 @@
     <color name="green_normal">#2ea95f</color>
     <color name="pink_eloviz">#e63656</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#292929</color>
+    <color name="grey_light">#515151</color>
 </resources>

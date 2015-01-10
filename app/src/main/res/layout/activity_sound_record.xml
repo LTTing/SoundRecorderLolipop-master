@@ -46,9 +46,9 @@
     <ImageButton
         android:id="@+id/save_button"
         android:text="Save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="fitXY"
         android:background="@drawable/ic_save"/>
 
 </LinearLayout>

@@ -42,8 +42,11 @@ public class SoundListActivity extends Activity {
         final ImageButton btnPlay = (ImageButton) findViewById(R.id.btn_play);
         final ImageButton btnStop = (ImageButton) findViewById(R.id.btn_stop);
 
+        btnPlay.setEnabled(false);
+        btnStop.setEnabled(false);
+
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        final List<String> soundList = new ArrayList<String>();
+        final List<String> soundList = new ArrayList<>();
 
         final ListView soundListView = (ListView) findViewById(R.id.list_sound);
 
@@ -57,7 +60,7 @@ public class SoundListActivity extends Activity {
                     soundList.add(filenameArray[0]);
             }
         }
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 soundList);
@@ -68,6 +71,8 @@ public class SoundListActivity extends Activity {
                 if (isPlaying)
                     return;
                 isPlaying = true;
+                btnPlay.setEnabled(true);
+                btnStop.setEnabled(true);
                 String s = (String) soundListView.getItemAtPosition(position);
                 mPlayer = new MediaPlayer();
                 try {
